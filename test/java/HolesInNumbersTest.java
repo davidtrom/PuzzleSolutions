@@ -4,12 +4,12 @@ import org.junit.Test;
 
 
 
-public class PuzzleSolutionsTest {
-    private PuzzleSolutions puzzle;
+public class HolesInNumbersTest {
+    private HolesInNumbers puzzle;
 
     @Before
     public void setUp() throws Exception {
-        puzzle = new PuzzleSolutions();
+        puzzle = new HolesInNumbers();
     }
 
     @Test

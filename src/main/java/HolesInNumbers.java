@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class PuzzleSolutions {
+public class HolesInNumbers {
 
     //Solves the puzzle how many holes does a certain string of numbers have
 
