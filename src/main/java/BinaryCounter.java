@@ -13,6 +13,9 @@ public class BinaryCounter {
             dividedAnswer=dividedAnswer / 2;
         }
         for(int i = 0; i < halves.size(); i++) {
+            if(halves.get(i) % 2 != 0){
+                result++;
+            }
             System.out.println(halves.get(i));
         }
         return result;
