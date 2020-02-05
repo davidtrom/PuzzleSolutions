@@ -11,7 +11,13 @@ public class IndicesInArrays {
     public ArrayList<Integer> findAtIndex (Integer [] indices, Integer [] numbersArray){
         ArrayList <Integer> result = new ArrayList<>();
         Arrays.sort(numbersArray);
+        for(int i = 1; i < indices.length; i++){
+            result.add(numbersArray[indices[i]]);
+        }
 
-        return
+        for(int j = 0; j < result.size(); j++){
+            System.out.println(result.get(j));
+        }
+        return result;
     }
 }
