@@ -6,7 +6,7 @@ public class GCF {
         if(checkDivisible(num1, num2) != null){
             return checkDivisible(num1, num2);
         }
-        
+
         return 0;
     }
 
