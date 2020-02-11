@@ -1,5 +1,7 @@
 package Factorial;//Find the factorial of a given number
 
+import java.security.cert.CertificateRevokedException;
+
 public class Factorial {
 
     public Integer findFactorial (Integer num){
@@ -10,7 +12,7 @@ public class Factorial {
 
        //Set up a custom exception class for this.
         else if (num < 0){
-            System.out.println("ERROR: The factorial of a negative number is undefined");
+           throw new NegativeFactorialException();
         }
 
         else {
@@ -18,7 +20,6 @@ public class Factorial {
                 result = result * i;
             }
         }
-
         return result;
     }
 }
