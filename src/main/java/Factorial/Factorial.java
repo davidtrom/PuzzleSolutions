@@ -6,20 +6,23 @@ public class Factorial {
 
     public Integer findFactorial (Integer num){
         Integer result = 1;
-        if (num == 0){
-            return 1;
-        }
-
-       //Set up a custom exception class for this.
-        else if (num < 0){
-           throw new NegativeFactorialException();
-        }
-
-        else {
-            for (int i = 1; i <= num; i++){
-                result = result * i;
+        try {
+            if (num == 0) {
+                return 1;
+            } else {
+                for (int i = 1; i <= num; i++) {
+                    result = result * i;
+                }
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
+//        else if (num < 0){
+//           throw new NegativeFactorialException();
+//        }
+
+
         return result;
     }
 }
