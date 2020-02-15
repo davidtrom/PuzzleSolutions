@@ -7,9 +7,9 @@ import java.util.Iterator;
 
 public class ConvertToBinary {
 
-    public Integer convertToBinary (Integer baseTen){
-        Integer half = baseTen;
-        ArrayList<Integer> halves = new ArrayList<>();
+    public Long convertToBinary (Long baseTen){
+        Long half = baseTen;
+        ArrayList<Long> halves = new ArrayList<>();
         String result = "";
         //ArrayList<Integer> result = new ArrayList<>();
 
@@ -23,16 +23,16 @@ public class ConvertToBinary {
 
         for (int i = 0; i < halves.size(); i++) {
             if(halves.get(i) %2 == 0){
-                halves.set(i, 0);
+                halves.set(i, 0L);
             }
             else if (halves.get(i) % 2 != 0){
-                halves.set(i, 1);
+                halves.set(i, 1L);
             }
         }
         System.out.println(halves.toString());
         for (int i = 0; i < halves.size(); i++) {
              result += halves.get(i);
         }
-        return Integer.valueOf(result);
+        return Long.valueOf(result);
     }
 }
