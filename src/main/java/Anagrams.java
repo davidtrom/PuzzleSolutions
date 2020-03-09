@@ -13,7 +13,11 @@ import java.util.stream.Collectors;
 
 public class Anagrams {
 
-    public Boolean anagramCheck(String a, String b) {
+    public Boolean anagramCheckStream(String a, String b) {
+        if(a.length()!=b.length()){
+            return false;
+        }
+
         a.toLowerCase();
         b.toLowerCase();
         String[] lettersA = a.split("");
@@ -28,6 +32,25 @@ public class Anagrams {
             return true;
         }
         else return false;
+    }
+
+    public Boolean anagramCheckArray (String a, String b){
+        if(a.length()!=b.length()){
+            return false;
+        }
+        a.toLowerCase();
+        b.toLowerCase();
+        String [] lettersA = a.split("");
+        String [] lettersB = b.split("");
+        Arrays.sort(lettersA);
+        Arrays.sort(lettersB);
+
+        for(int i = 0; i < lettersA.length; i++){
+            if(!lettersA[i].equals(lettersB[i])){
+                return false;
+            }
+        }
+        return true;
     }
 
 }
