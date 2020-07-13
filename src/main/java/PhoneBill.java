@@ -3,7 +3,6 @@ import java.util.*;
 public class PhoneBill {
     public int solution(String S) {
         // write your code in Java SE 8
-        // write your code in Java SE 8
         Map<String, String> occurences = new HashMap<>();
 
         String [] billDetailsByLine = S.split("\n");
